@@ -3,7 +3,7 @@
   "name": "aged-forest-5a85",
   "compatibility_date": "2026-10-30",
   "assets": {
-    "directory": ".",
+    "directory": "./public",
     // keep the .html URLs used by the sitemap and canonical tags (no 307 redirect)
     "html_handling": "none",
     "not_found_handling": "404-page"
