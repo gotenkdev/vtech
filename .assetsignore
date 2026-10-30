@@ -1,0 +1,6 @@
+.git
+.gitignore
+.impeccable
+.DS_Store
+wrangler.jsonc
+.assetsignore
