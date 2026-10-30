@@ -149,11 +149,12 @@ function init() {
   notch.position.set(0, LH - .45, .055); lid.add(notch);
   const camDot = new THREE.Mesh(new THREE.CircleGeometry(.11, 24), new THREE.MeshPhysicalMaterial({ color: 0x223355, roughness: .1, clearcoat: 1 }));
   camDot.position.set(0, LH - .45, .07); lid.add(camDot);
-  // back logo: polished "V"
+  // back logo: brand mark printed on the anodised lid
   {
-    const cv = document.createElement('canvas'); cv.width = cv.height = 256;
-    const g = cv.getContext('2d'); g.fillStyle = '#fff'; g.font = '700 220px "Space Grotesk", system-ui'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText('V', 128, 140);
-    const logo = new THREE.Mesh(new THREE.PlaneGeometry(4, 4), new THREE.MeshPhysicalMaterial({ color: 0xffffff, metalness: 1, roughness: .05, alphaMap: new THREE.CanvasTexture(cv), transparent: true }));
+    const tex = new THREE.TextureLoader().load('/assets/img/icon-512.png');
+    tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
+    const logo = new THREE.Mesh(new THREE.PlaneGeometry(5, 5),
+      new THREE.MeshPhysicalMaterial({ map: tex, transparent: true, metalness: .4, roughness: .2, clearcoat: 1 }));
     logo.position.set(0, LH / 2, -LT - .01); logo.rotation.y = Math.PI; lid.add(logo);
   }
   // HTML screen glued to the display

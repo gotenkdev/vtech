@@ -463,3 +463,9 @@ section[style*="--bg2"]{background:linear-gradient(#0b1020d9,#0b1020d9)!importan
 .mac-css #screen{transition:opacity .25s}
 .has3d .rig{display:none}
 .has3d .scene::after{display:none}
+
+/* brand logo image */
+.logo{display:inline-flex;align-items:center;flex:none}
+.logo img{height:36px;width:auto;display:block}
+footer .logo img{height:32px}
+@media(max-width:860px){.logo img{height:30px}}
