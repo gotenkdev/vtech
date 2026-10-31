@@ -151,7 +151,7 @@ function init() {
   camDot.position.set(0, LH - .45, .07); lid.add(camDot);
   // back logo: brand mark printed on the anodised lid
   {
-    const tex = new THREE.TextureLoader().load('/assets/img/icon-512.png');
+    const tex = new THREE.TextureLoader().load('/assets/img/mark-512.png');
     tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8;
     const logo = new THREE.Mesh(new THREE.PlaneGeometry(5, 5),
       new THREE.MeshPhysicalMaterial({ map: tex, transparent: true, metalness: .4, roughness: .2, clearcoat: 1 }));
